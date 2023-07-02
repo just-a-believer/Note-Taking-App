@@ -1,0 +1,159 @@
+html {
+    font-family: "Roboto", serif;
+    background-color: rgb(245, 242, 233); 
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 1rem;
+    color: royalblue;
+}
+
+input {
+    flex: 1 1 80%;
+    border: 1px solid black;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0; 
+}
+
+.inputField {
+    margin: 1rem auto;
+ }
+
+.title, .note  {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: rgb(231, 230, 230);
+    flex: 1 1 80%;
+    border: 1px solid black;
+    padding: .5rem;
+}
+
+.title:focus, .note:focus {
+    outline: 2px solid red;
+}
+
+.requireMessage {
+    margin: 1 rem 0 1.5remß;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 2px 4px 7px 2px;
+}
+
+.noteStyle {
+    border: 3px solid black;
+    padding: 1.5rem;
+    transition: all 250ms ease-in-out;
+    margin: 1rem;
+}
+
+.deleteStyle {
+    padding: .5rem 1rem;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(252, 94, 94);
+    margin-right: .5rem;
+}
+
+.viewStyle {
+    padding: .5rem 1rem;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(100, 152, 248);
+    margin-left: .5rem;
+}
+
+.modalField {
+    display: none;
+    position: fixed;
+    /*z-index: 1;*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    place-items: center;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    /*opacity: 0;*/
+    /*pointer-events: none;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0s, opacity 0.25s, transform 0.25s;*/
+    transition: 1s;
+}
+
+.modalContent {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    overflow: auto;
+    position: relative;
+}
+
+.modalTitle {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 85%;
+}
+
+#closeButton {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    line-height: 2rem;
+    background-color: white;
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 0px solid black;
+}
+
+#closeButton:hover,
+#closeButton:focus {
+    color: rgb(252, 94, 94);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#outputValue {
+    max-width: 1000px;
+    margin: 2rem auto 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    flex: 1 1 80%
+}
+
+
+#addNote{
+    background-color: rgb(231, 230, 230);
+    border: 3px solid transparent;
+    padding: .5rem;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    font-size: 1rem;
+}
+
+#addNote:hover {
+    outline: none;
+    border: 3px solid royalblue;
+    background-color: greenyellow;
+}
